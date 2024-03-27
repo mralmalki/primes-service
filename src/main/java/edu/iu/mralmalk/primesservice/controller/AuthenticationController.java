@@ -41,9 +41,7 @@ public class AuthenticationController {
                 .authenticate(
                         new UsernamePasswordAuthenticationToken(
                                 customer.getUsername(),
-                                customer.getPassword()
-                        )
-                );
+                                customer.getPassword()));
         return tokenService.generateToken(authentication);
     }
 }
